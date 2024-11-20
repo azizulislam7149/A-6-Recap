@@ -12,10 +12,31 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/js/all.min.js" integrity="sha512-8py0AXTY8pfAroJmBkYfJ+VuKUKMMsUOC1MldW9kkC/k4SZi6AexSDS60QYn41U2rp8KL9IpVHy8FxW2TDmjDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
- <h1>hello</h1>
+    <div class="flex justify-center mb-10">
+        <ul class="flex gap-8">
+            <li><a href="/">Home</a</li>
+            <li><a href=""></a>Shop</li>
+            <li><a href=""></a>Contact</li>
+        </ul>
+        
+    </div>
+
+    <div class="flex justify-center mb-8">
+       <a href="#adopt-container"> <button class=" text-2xl  bg-amber-200">View more</button></a>
+    </div>
+   
+
+ <h1 id="adopt-container" class="text-center font-extrabold text-5xl">Adopt your best friend</h1>
  <section>
     <div id="pet-categories" class="flex gap-4 justify-center lg:justify-between items-center my-4"></div>
  </section>
+
+        <!-- sort button -->
+         <div class="flex justify-between m-14">
+            <h1 class="text-lg font-bold">BEST deal for you</h1>
+            <button onclick="sort()" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Sort by price</button>
+         </div>
+
  <!-- all pets -->
   <div class="my-12 ">
 
@@ -34,10 +55,46 @@
 
         </div>
     <!-- image section -->
-     <div class="bg-red-800"></div>
+     <div id="liked-pets" class="bg-red-800 h-fit rounded-lg border grid grid-cols-2 gap-2 py-2 w-full"></div>
 </div>
   </div>
  <!-- all pets -->
+<!-- adopt modal -->
+ <!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <i class="fa-regular fa-handshake text-4xl bg-gradient-to-r from-purple-800"></i>
+    <h3 class="text-lg font-bold">Congratulation</h3>
+    <p class="py-4 font-semibold">Adoption will be done in</p>
+    <p id="countdown-container" class="py-4 text-5xl mb-4 font-bold">3</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+<!-- adopt modal -->
+
+<!-- details modal -->
+ 
+<!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_2" class="modal">
+  <div class="modal-box">
+   <div id="details-container"></div>
+  </div>
+  <div class="modal-action ">
+    <form method="dialog" class="inline-block w-full">
+        <button class="btn w-full border border-teal-700">cancel</button>
+      </form>
+  </div>
+ 
+</dialog>
+<!-- details modal -->
+
     <script src="js/utilities.js"></script>
     <script src="js/main.js"></script>
 </body>
